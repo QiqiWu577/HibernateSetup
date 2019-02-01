@@ -1,2 +1,4 @@
+  ## Welcome to My Blog
+  
   In this blog, I am going to use Intellij as my IDE and MyAQL as my database. Actually, my plan for this blog is going to talk more about C++, but after I starts to set up the hibernate to build a connection with database I realize that this process will be a pain at the beginning for the project. Now, It is a good chance to share the information of how I solve this problem so that if anyone meets similar problems, this blog can give you some usefule ideas.
 
