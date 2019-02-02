@@ -9,7 +9,7 @@ In order to using Hibernate, there are two thing we need to prepare. One thing i
 
 Since I am using Maven as my project management, I just need to add the [Hibernate dependency](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.4.1.Final) on the pom.xml file which is the configuration file for Maven project. I also want to mention that if you are using **Intellij** as you development tool, you need to add the new library to the artifact in the **project structure** section in order to compile the program using the library you already set. Otherwise, the libraries you added will be useless and the program propably can not run.
 
-###Adding the Hibernate library
+### Adding the Hibernate library
 
 ```markdown
 <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
@@ -21,7 +21,7 @@ Since I am using Maven as my project management, I just need to add the [Hiberna
 
 ```
 
-###Hibernate configuration
+### Hibernate configuration
 
 There are two type of configuration files you can use, which are **hibernate.properties** and **hibernate.cfg.xml**. Bother files are equivalent and I will prefer using hibernate.cfg.xml file as I am more familiar with the format of it. 
 
@@ -62,7 +62,7 @@ After that, you are able to find the configuration file in the resources folder.
 
 As you can see, we have to define the class path, driver class, username and password for the connection to the MySQL database, which is very similar to the way we did using Java classes. The property dialect means what kind of database language we are going to use so that the Hibernate will know how to communicate with the database we use in order to retrieve and save the data. The second important property for this xml file is the `hbm2ddl.auto`. There are several values we can set, such as `create`, `update` and `validate`, which are very useful features of Hibernate. For example, if we write **create**, Hibernate will destroy the original tables if they exist and automatically manipulate corresponding tables in the database each time whenever the program is executed. **Update** values will enable Hibernate to check and update the schema and the **validate** value will let Hibernate to validate the schema of the database.
 
-##Generating mapping
+## Generating mapping
 
 Now, you may realize the importance of JPA provider, Hibernate, to truly implement the Object-Relational Mapping(ORM). 
 
@@ -72,14 +72,14 @@ As I am still in learning process, I would prefer the second approch, which is u
 
 Even though I am using Intellij but Netbeans would be a better choice for mapping since Netbeans will generate all the usefule JPA quiries at the top of the persistent class and we can just copy and paste these quiries into the class that will operate retrieving from and saving data to the database. Let me show you how to do.
 
-###For Intellij
+### For Intellij
 
 Go to the Persistence section, right click the project and choose generating persistent mapping by database schema(you have to set up the database connection in the IDE first). 
 [Image]()
 
 Then, just select what entity classes you want to generate and follow the instruction.
 
-###For Netbeans
+### For Netbeans
 
 Using Netbeans to generate mapping is very simple. Right click the packege the persistent classes will be stored and under the new option select **Entity classes from database**.
 [Image]()
@@ -87,6 +87,6 @@ Using Netbeans to generate mapping is very simple. Right click the packege the p
 This is the very useful quries part for annotation in Netbeans I mentioned before.
 [Image]()
 
-##Summary
+## Summary
 
 In my opinion, both method of generating mapping have their benefit and downside. Writing annotation can let developers focus on their programming tasks and save a lot of time to figure out how to deal with the data with database but the premise is that the developers are confident to write those annotation correctely. Another way is very convenient but the developers may not have enough knowledge about JPA, which is not the good way to upgrade their skill. In addition, before you are going to generate persistent classes, it is better to spend a little of time on considering what data type will be supported in the database and Java classes so that they can match each other effectively.
