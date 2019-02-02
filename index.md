@@ -26,13 +26,13 @@ Since I am using Maven as my project management, I just need to add the [Hiberna
 There are two type of configuration files you can use, which are **hibernate.properties** and **hibernate.cfg.xml**. Bother files are equivalent and I will prefer using hibernate.cfg.xml file as I am more familiar with the format of it. 
 
 For Intellij, we have to go to the Module section to add Hibernate to support our project.
-[Image]()
+[Image](1.PNG)
 
 Then, we need to create the new folder under the source folder(you need to mark it) and mark it as resource folder and configuration file will be hoested in this folder.
-[Image]()
+[Image](3.PNG)
 
 In the same section, select the Hibernate icon and click `+` to make the **hibernate.cfg.xml** file. 
-[Image]()
+[Image](2.PNG)
 
 After that, you are able to find the configuration file in the resources folder. Here is my configure file example.
 
@@ -75,17 +75,17 @@ Even though I am using Intellij but Netbeans would be a better choice for mappin
 ### For Intellij
 
 Go to the Persistence section, right click the project and choose generating persistent mapping by database schema(you have to set up the database connection in the IDE first). 
-[Image]()
+[Image](4.PNG)
 
 Then, just select what entity classes you want to generate and follow the instruction.
 
 ### For Netbeans
 
 Using Netbeans to generate mapping is very simple. Right click the packege the persistent classes will be stored and under the new option select **Entity classes from database**.
-[Image]()
+[Image](5.PNG)
 
 This is the very useful quries part for annotation in Netbeans I mentioned before.
-[Image]()
+[Image](6.PNG)
 
 ## Summary
 
