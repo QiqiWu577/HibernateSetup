@@ -1,11 +1,11 @@
 ## Welcome to My Blog
   
-In this blog, I am going to use Intellij as my IDE and MySQL as my database. Actually, my plan for this blog is going to talk more about C++, but after I started to set up the hibernate to build a connection with database I realize that this process will be a pain at the beginning for the project. Now, It is a good chance to share the information of how I solve this problem so that if anyone else meets similar problems, this blog may give you some useful ideas.
+In this blog, I am going to use Intellij as my IDE and MySQL as my database. Actually, my plan for this blog is going to talk more about C++, but after I started to set up the hibernate to build a connection with database I realized that this process will be a pain at the beginning for my ongoing project. Now, It is a good chance to share the information of how I solve this problem so that if anyone else meets similar problems, this blog may give you some useful ideas.
 
 ## Getting started with Hibernate
 Just like the Java Persistence API(JPA), Hibernate is an implementation of JPA. Specifically, JPA is a Java specification for accessing, persisting and managing data between Java objects an relational database. You can follow and use the annotations from JPA but nothing will happen without using JPA provider, like Hibernate, Eclipselink, Toplink and so on. In my case, Hibernate will be used to map the tables of the database.
 
-In order to using Hibernate, there are two thing we need to prepare. One thing is adding the Hibernate library to our project and the other thing is to set up the Hibernate configuration file so that the mapping of Hibernate is working.
+In order to using Hibernate, there are two things we need to prepare. One thing is adding the Hibernate library to our project and the other thing is to set up the Hibernate configuration file so that the mapping of Hibernate is working.
 
 Since I am using Maven as my project management, I just need to add the [Hibernate dependency](https://mvnrepository.com/artifact/org.hibernate/hibernate-core/5.4.1.Final) on the pom.xml file which is the configuration file for Maven project. I also want to mention that if you are using **Intellij** as your development tool, you need to add the new library to the artifact in the **project structure** section in order to compile the program using the library you already set. Otherwise, the libraries you added will be useless and the program probably cannot run.
 
